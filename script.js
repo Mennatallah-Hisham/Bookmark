@@ -46,7 +46,7 @@ function storeBookmark (e){
  
     let urlValue =form.url.value;
     let titleValue =form.website.value;
-    let noteValue =form.note.value;
+  
    
 
     if(!urlValue.startsWith("https://") && !urlValue.startsWith("http://")){
@@ -59,7 +59,7 @@ function storeBookmark (e){
     let bookmark={
         name:titleValue ,
         url:urlValue,
-        note:noteValue
+      
     }
 
     addToLocalStorage(bookmark);
@@ -106,12 +106,11 @@ container.textContent="";
       <img
         src="https://s2.googleusercontent.com/s2/favicons?domain=${bookmark.url}"
         alt="Favicon"
+        class="link-icon"
       />
      ${bookmark.name}
     </a>
-    <p class="card-note">
-     ${bookmark.note}
-    </p>
+   
     <button
     class="icon-box"
     aria-label="delete bookmark"
